@@ -38,25 +38,26 @@ const teamMembers = [
 ];
 
 
-// STAMPARE LE CARD DINAMICAMENTE
 
-// FUNZIONE
+
+// CREAZIONE CARD
+
+
 
 const createCard = ({ name, role, email, img }) => {
   return `
-      <div class="row">
             <div class="col-4">
                 <!-- Card -->
-                <div class="card mb-3 text-white bg-black" style="max-width: 540px;">
+                <div class="card mb-3 text-white bg-black"> 
                     <div class="row g-0">
                         <!-- Card img -->
                         <div class="col-md-4">
-                            <img src="./img/${img}" class="img-fluid rounded-start" alt="${name}">
+                            <img src="${img}" class="img-fluid rounded-start" alt="${name}">
                         </div>
                         <!-- Card description -->
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="name">${name}</h5>
+                                <h4 class="name mt-3">${name}</h4>
                                 <p class="role">${role}</p>
                                 <p class="email text-info">${email}</p>
                             </div>
@@ -64,22 +65,23 @@ const createCard = ({ name, role, email, img }) => {
                     </div>
                 </div>
             </div>
-        </div>
      `;
 };
 
 
 
 
- 
-const teamContainer = document.querySelector("container"); 
+ // STAMPARE LE CARD DINAMICAMENTE
+const teamContainer = document.getElementById("card-container"); 
+
 const renderTeam = () => {
+ let items = "";
  for (let i = 0; i < teamMembers.length; i++) {
-    let items = "";
     const card = createCard(teamMembers[i]);
     items += card;
   }
   teamContainer.innerHTML = items;
 };
 
+// INVOCO LA FUNZIONE
 renderTeam(); 

@@ -8,31 +8,42 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Document</title>
     <style>
-        .text-pink{
+        .text-pink {
             color: rgb(197, 55, 121);
-            font-family:fantasy;
+            font-family: fantasy;
+        }
+
+        .card {
+            --bs-card-spacer-y: 0;
+        }
+
+        .name { 
+            text-transform: uppercase;
         }
     </style>
 
 </head>
 
 <body>
-    
+
+    <div class="container">
+
         <!-- Header -->
-         <div class="text-center mt-5">
+        <div class="text-center mt-5">
             <h1 class="text-pink"> Meet Our Team</h1>
-            <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. .Commodi ea vitae labore facere, voluptas in. Optio dolorum quas cumque officiis aliquam modi, nobis tempora harum ad autem omnis quod doloreCommodi ea vitae labore facere, voluptas in. Optio dolorum quas.</p>
-         </div>
+            <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. .Commodi ea vitae labore facere,
+                voluptas in. Optio dolorum quas cumque officiis aliquam modi, nobis tempora harum ad autem omnis quod
+                doloreCommodi ea vitae labore facere, voluptas in. Optio dolorum quas.</p>
+        </div>
         <!-- /Header -->
-                   <img src="" alt="">
-          <!-- Main -->
-        <div class="container">
-        
-    </div>
+
+        <!-- Main -->
+        <div id="card-container" class="row"></div>
         <!-- /Main -->
- 
-    
-    
+
+    </div>
+
+
 
     <script src="./js/script.js"></script>
 </body>
